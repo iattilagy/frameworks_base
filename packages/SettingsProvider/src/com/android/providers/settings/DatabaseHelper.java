@@ -1497,6 +1497,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             loadIntegerSetting(stmt, Settings.System.POINTER_SPEED,
                     R.integer.def_pointer_speed);
 
+            loadIntegerSetting(stmt, Settings.System.WIFI_SLEEP_POLICY,
+                    R.integer.def_wifi_sleep_policy);
         } finally {
             if (stmt != null) stmt.close();
         }
@@ -1525,6 +1527,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         loadStringSetting(stmt, Settings.System.CAR_UNDOCK_SOUND,
             R.string.def_car_undock_sound);
 
+        loadIntegerSetting(stmt, Settings.System.VOLUME_ADJUST_SOUNDS_ENABLED,
+            R.integer.def_volume_adjust_sounds_enabled);
         loadIntegerSetting(stmt, Settings.System.LOCKSCREEN_SOUNDS_ENABLED,
             R.integer.def_lockscreen_sounds_enabled);
         loadStringSetting(stmt, Settings.System.LOCK_SOUND,
